@@ -1,0 +1,24 @@
+<?php
+   $user = $_GET['user'];
+   $password = $_GET['password'];//Se crean las variables “user” y “password” que contendrán la información correspondiente introducida por el usuario en el formulario
+   if (($user == "encargado") AND ($password == "encar")) {//Establece el valor del usuario y la contraseña, para que se pueda acceder o no al contenido
+     echo "Bienvenido ".$user;
+	 echo "<html><h2>C O N T E N I D O S del S I T I O 1 . . .</h2></html>";//se mostrara el contenido del sitio del administrador
+   } 
+   else if (($user == "cliente") AND ($password == "tneilc")) {
+	  echo "Bienvenido ".$user;//Se muestra un mensaje que dice “Bienvenido” y el nombre del usuario, en caso que los datos proporcionados sean correctos
+	  echo "<html><h2>C O N T E N I D O S del S I T I O 2 . . .</h2></html>";//se mostrara el contenido del sitio del cliente
+   }
+   else if (($user == "contador") AND ($password == "cont")) {
+	  echo "Bienvenido ".$user;//Se muestra un mensaje que dice “Bienvenido” y el nombre del usuario, en caso que los datos proporcionados sean correctos
+	  echo "<html><h2>C O N T E N I D O S del S I T I O 3 . . .</h2></html>";//se mostrara el contenido del sitio del cliente
+   }
+   else if (($user == "supervisor") AND ($password == "super")) {
+	  echo "Bienvenido ".$user;//Se muestra un mensaje que dice “Bienvenido” y el nombre del usuario, en caso que los datos proporcionados sean correctos
+	  echo "<html><h2>C O N T E N I D O S del S I T I O 4 . . .</h2></html>";//se mostrara el contenido del sitio del cliente
+   }
+   else{
+	  echo "¡Usuario o contraseña incorrectos!";//En caso que los datos sean incorrectos, se muestra un mensaje al usuario, los datos son incorrectos.
+      echo '<br><a href="'.$_SERVER['HTTP_REFERER'].'">Volver</a>';
+   }
+?>
